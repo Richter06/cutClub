@@ -34,7 +34,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-image-wrap">
-        <div className="hero-image" role="img" aria-label="Barbeiro trabalhando em um corte" />
+        <div className="hero-image" role="img" aria-label="Equipamentos de barbearia" />
         <div className="hero-stamp">CUT<br />DIFFERENT</div>
       </div>
 

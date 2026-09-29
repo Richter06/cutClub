@@ -93,10 +93,12 @@
 }
 
 .eyebrow {
+  
   margin: 0 0 .2rem;
   color: #e8ff00;
   font: 700 .7rem/1 var(--font-mono);
   letter-spacing: .16em;
+  transform: translateY(-15px);
 }
 
 .hero-title h1 {
