@@ -1,0 +1,19 @@
+.styles-section { background:#151515; overflow:hidden; }
+.styles-intro { margin:7rem 0 4rem; }
+.styles-intro h2 { color:#f4f0e8; }
+.styles-intro h2 span { -webkit-text-stroke-color:#f4f0e8; }
+.style-stage { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr); min-height:650px; border:1px solid rgba(244,240,232,.22); }
+.style-image { min-height:550px; position:relative; background-size:cover;background-position:center; filter:grayscale(1); transition:background-image .5s ease, filter .7s ease; }
+.style-image::after {content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 50%,#151515 100%);opacity:.65}
+.style-image-index,.style-image-label { position:absolute;z-index:2;top:1.2rem;font:700 .62rem/1 var(--font-mono);letter-spacing:.12em;color:#fff }
+.style-image-index{left:1.2rem}.style-image-label{right:1.2rem}
+.style-copy { display:flex; flex-direction:column; justify-content:flex-end; padding:clamp(2rem,5vw,5rem); background:#e8ff00;color:#111; }
+.style-number { font:700 .65rem/1 var(--font-mono); }
+.style-copy h3 { margin:1rem 0 .7rem;font:900 clamp(4rem,7vw,7rem)/.8 var(--font-display);letter-spacing:-.07em; }
+.style-copy p { max-width:280px;font:500 .8rem/1.5 var(--font-mono); }
+.style-copy a { margin-top:2rem;font:900 .65rem/1 var(--font-mono);text-decoration:none;border-bottom:1px solid #111;padding-bottom:.6rem;width:max-content }
+.style-tabs { display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(244,240,232,.22);border-top:0; }
+.style-tabs button { padding:1.2rem;border:0;border-right:1px solid rgba(244,240,232,.22);background:transparent;color:#f4f0e8;text-align:left;font:900 clamp(1.2rem,2vw,2rem)/1 var(--font-display);cursor:pointer;transition:background .3s ease,color .3s ease }
+.style-tabs button span { display:block;font:700 .55rem/1 var(--font-mono);opacity:.5;margin-bottom:.8rem }
+.style-tabs button:last-child{border-right:0}.style-tabs button:hover,.style-tabs button.is-active{background:#f4f0e8;color:#111}
+@media(max-width:750px){.style-stage{grid-template-columns:1fr}.style-image{min-height:55vh}.style-copy{min-height:330px}.style-tabs{grid-template-columns:1fr 1fr}.style-tabs button:nth-child(2){border-right:0}.style-tabs button:nth-child(-n+2){border-bottom:1px solid rgba(244,240,232,.22)}}
