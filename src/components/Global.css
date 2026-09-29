@@ -64,8 +64,48 @@ img {
   transform: translateY(0);
 }
 
+/*
+  Highlight motion
+ ---------------
+  The important words use a second, shorter motion after their section
+  reveal. It keeps the existing editorial layout intact while giving the
+  typography a little more physical presence.
+*/
+
+@keyframes highlight-rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, .22em, 0) skewY(2deg);
+    clip-path: inset(100% 0 0 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) skewY(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes highlight-snap {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, .12em, 0) scaleX(.96);
+  }
+
+  65% {
+    opacity: 1;
+    transform: translate3d(0, -.025em, 0) scaleX(1.01);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scaleX(1);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+
   *,
   *::before,
   *::after {
@@ -73,6 +113,7 @@ img {
     animation-iteration-count: 1 !important;
     transition-duration: 1ms !important;
   }
+
   .reveal {
     opacity: 1;
     transform: none;
