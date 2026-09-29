@@ -7,25 +7,25 @@ const styles = [
     name: 'FADE',
     number: '01',
     description: 'Precisão nas laterais. Presença no topo.',
-    image: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1200&q=85',
+    image: 'https://plus.unsplash.com/premium_photo-1661645788141-8196a45fb483?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
     name: 'CLASSIC',
     number: '02',
     description: 'Tesoura, textura e uma linha que nunca sai.',
-    image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=85',
+    image: 'https://images.unsplash.com/photo-1456327102063-fb5054efe647?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNsYXNzaWMlMjBoYWlyY3V0fGVufDB8MHwwfHx8MA%3D%3D'
   },
   {
     name: 'TEXTURED',
     number: '03',
     description: 'Volume, movimento e zero cara de uniforme.',
-    image: 'https://images.unsplash.com/photo-1517832207067-4db24a2ae47c?auto=format&fit=crop&w=1200&q=85',
+    image: 'https://images.unsplash.com/photo-1579119159780-51419861f69f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dGV4dHVyZWQlMjBoYWlyY3V0fGVufDB8MHwwfHx8MA%3D%3D'
   },
   {
     name: 'STREET',
     number: '04',
     description: 'Mais atitude. Menos regra.',
-    image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85',
+    image: 'https://plus.unsplash.com/premium_photo-1723532445660-3913d3444216?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c3RyZWV0JTIwaGFpcmN1dHxlbnwwfDB8MHx8fDA%3D'
   },
 ]
 
