@@ -17,9 +17,14 @@
   -webkit-text-stroke-color: #111;
 }
 
-/* =========================================================
-   FEATURED ARCHIVE
-   ========================================================= */
+.gallery-heading h2 span {
+  display: inline-block;
+  transform-origin: 0 100%;
+}
+
+.reveal.is-visible .gallery-heading h2 span {
+  animation: highlight-snap 900ms 120ms cubic-bezier(.16,1,.3,1) both;
+}
 
 .gallery-grid-featured {
   display: grid;
@@ -43,12 +48,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-
   filter: grayscale(1);
-
-  transition:
-    transform 900ms cubic-bezier(.16, 1, .3, 1),
-    filter 600ms ease;
+  transition: transform 900ms cubic-bezier(.16, 1, .3, 1), filter 600ms ease;
 }
 
 .gallery-card a:hover img,
@@ -57,279 +58,96 @@
   filter: grayscale(.2);
 }
 
-/* =========================================================
-   FEATURED POSITIONS
-   ========================================================= */
+.gallery-card-1 { grid-column: 1 / 8; }
+.gallery-card-2 { grid-column: 9 / 13; margin-top: 9rem; }
+.gallery-card-3 { grid-column: 3 / 8; margin-top: -2rem; }
+.gallery-card-4 { grid-column: 8 / 13; margin-top: 12rem; }
 
-.gallery-card-1 {
-  grid-column: 1 / 8;
-}
-
-.gallery-card-2 {
-  grid-column: 9 / 13;
-  margin-top: 9rem;
-}
-
-.gallery-card-3 {
-  grid-column: 3 / 8;
-  margin-top: -2rem;
-}
-
-.gallery-card-4 {
-  grid-column: 8 / 13;
-  margin-top: 12rem;
-}
-
-.gallery-card-1 a {
-  aspect-ratio: 1 / .92;
-}
-
+.gallery-card-1 a { aspect-ratio: 1 / .92; }
 .gallery-card-2 a,
-.gallery-card-3 a {
-  aspect-ratio: 1 / 1.15;
-}
-
-.gallery-card-4 a {
-  aspect-ratio: 1 / .9;
-}
-
-/* =========================================================
-   ARCHIVE FEED
-   ========================================================= */
+.gallery-card-3 a { aspect-ratio: 1 / 1.15; }
+.gallery-card-4 a { aspect-ratio: 1 / .9; }
 
 .gallery-archive {
   display: grid;
-
-  /*
-    A grade propositalmente irregular.
-    Os cards ocupam quantidades diferentes de colunas
-    e têm offsets diferentes.
-  */
-
   grid-template-columns: repeat(12, 1fr);
-
   column-gap: clamp(1rem, 2.5vw, 2.5rem);
   row-gap: clamp(5rem, 10vw, 11rem);
-
   margin-top: 12rem;
-
   align-items: start;
 }
 
-/* =========================================================
-   ARCHIVE CARD 01
-   ========================================================= */
-
-.archive-card-1 {
-  grid-column: 1 / 5;
-  margin-top: 2rem;
-}
-
-.archive-card-1 a {
-  aspect-ratio: 1 / 1.25;
-}
-
-/* =========================================================
-   ARCHIVE CARD 02
-   ========================================================= */
-
-.archive-card-2 {
-  grid-column: 6 / 11;
-  margin-top: -5rem;
-}
-
-.archive-card-2 a {
-  aspect-ratio: 1 / .78;
-}
-
-/* =========================================================
-   ARCHIVE CARD 03
-   ========================================================= */
-
-.archive-card-3 {
-  grid-column: 10 / 13;
-  margin-top: 8rem;
-}
-
-.archive-card-3 a {
-  aspect-ratio: 1 / 1.35;
-}
-
-/* =========================================================
-   ARCHIVE CARD 04
-   ========================================================= */
-
-.archive-card-4 {
-  grid-column: 3 / 8;
-  margin-top: 1rem;
-}
-
-.archive-card-4 a {
-  aspect-ratio: 1 / .9;
-}
-
-/* =========================================================
-   ARCHIVE CARD 05
-   ========================================================= */
-
-.archive-card-5 {
-  grid-column: 8 / 12;
-  margin-top: -7rem;
-}
-
-.archive-card-5 a {
-  aspect-ratio: 1 / 1.2;
-}
-
-/* =========================================================
-   ARCHIVE CARD 06
-   ========================================================= */
-
-.archive-card-6 {
-  grid-column: 1 / 6;
-  margin-top: 6rem;
-}
-
-.archive-card-6 a {
-  aspect-ratio: 1 / .72;
-}
-
-/* =========================================================
-   ARCHIVE CARD 07
-   ========================================================= */
-
-.archive-card-7 {
-  grid-column: 6 / 10;
-  margin-top: -2rem;
-}
-
-.archive-card-7 a {
-  aspect-ratio: 1 / 1.15;
-}
-
-/* =========================================================
-   ARCHIVE CARD 08
-   ========================================================= */
-
-.archive-card-8 {
-  grid-column: 10 / 13;
-  margin-top: 10rem;
-}
-
-.archive-card-8 a {
-  aspect-ratio: 1 / .95;
-}
-
-/* =========================================================
-   IMAGE OVERLAY
-   ========================================================= */
+.archive-card-1 { grid-column: 1 / 5; margin-top: 2rem; }
+.archive-card-1 a { aspect-ratio: 1 / 1.25; }
+.archive-card-2 { grid-column: 6 / 11; margin-top: -5rem; }
+.archive-card-2 a { aspect-ratio: 1 / .78; }
+.archive-card-3 { grid-column: 10 / 13; margin-top: 8rem; }
+.archive-card-3 a { aspect-ratio: 1 / 1.35; }
+.archive-card-4 { grid-column: 3 / 8; margin-top: 1rem; }
+.archive-card-4 a { aspect-ratio: 1 / .9; }
+.archive-card-5 { grid-column: 8 / 12; margin-top: -7rem; }
+.archive-card-5 a { aspect-ratio: 1 / 1.2; }
+.archive-card-6 { grid-column: 1 / 6; margin-top: 6rem; }
+.archive-card-6 a { aspect-ratio: 1 / .72; }
+.archive-card-7 { grid-column: 6 / 10; margin-top: -2rem; }
+.archive-card-7 a { aspect-ratio: 1 / 1.15; }
+.archive-card-8 { grid-column: 10 / 13; margin-top: 10rem; }
+.archive-card-8 a { aspect-ratio: 1 / .95; }
 
 .gallery-number,
 .gallery-title {
   position: absolute;
   z-index: 3;
-
   color: #fff;
-
   font: 700 .62rem/1 var(--font-mono);
   letter-spacing: .1em;
+  transition:transform .35s cubic-bezier(.16,1,.3,1), opacity .35s ease;
 }
 
-.gallery-number {
-  top: 1rem;
-  left: 1rem;
-}
-
-.gallery-title {
-  right: 1rem;
-  bottom: 1rem;
-}
+.gallery-number { top: 1rem; left: 1rem; }
+.gallery-title { right: 1rem; bottom: 1rem; }
 
 .gallery-card a::after,
 .archive-card a::after {
   content: '';
-
   position: absolute;
   inset: 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, .3),
-      transparent 30%,
-      rgba(0, 0, 0, .55)
-    );
-
+  background: linear-gradient(180deg, rgba(0, 0, 0, .3), transparent 30%, rgba(0, 0, 0, .55));
   pointer-events: none;
+  transition:opacity .5s ease;
 }
 
-/* =========================================================
-   HOVER DETAILS
-   ========================================================= */
+.gallery-card a:hover::after,
+.archive-card a:hover::after { opacity:.75; }
+
+.gallery-card a:hover .gallery-title,
+.archive-card a:hover .gallery-title { transform:translateX(-4px); }
+
+.gallery-card a:hover .gallery-number,
+.archive-card a:hover .gallery-number { transform:translateY(-3px); opacity:.7; }
 
 .gallery-card a,
 .archive-card a {
-  transition:
-    transform 500ms cubic-bezier(.16, 1, .3, 1);
+  transition:transform 500ms cubic-bezier(.16,1,.3,1);
 }
 
 .gallery-card a:hover,
-.archive-card a:hover {
-  transform: translateY(-4px);
-}
-
-/* =========================================================
-   TABLET
-   ========================================================= */
+.archive-card a:hover { transform:translateY(-4px); }
 
 @media (max-width: 900px) {
-
-  .gallery-archive {
-    row-gap: 6rem;
-  }
-
-  .archive-card-1 {
-    grid-column: 1 / 6;
-  }
-
-  .archive-card-2 {
-    grid-column: 7 / 13;
-  }
-
-  .archive-card-3 {
-    grid-column: 9 / 13;
-  }
-
-  .archive-card-4 {
-    grid-column: 2 / 8;
-  }
-
-  .archive-card-5 {
-    grid-column: 7 / 12;
-  }
-
-  .archive-card-6 {
-    grid-column: 1 / 7;
-  }
-
-  .archive-card-7 {
-    grid-column: 5 / 10;
-  }
-
-  .archive-card-8 {
-    grid-column: 9 / 13;
-  }
+  .gallery-archive { row-gap: 6rem; }
+  .archive-card-1 { grid-column: 1 / 6; }
+  .archive-card-2 { grid-column: 7 / 13; }
+  .archive-card-3 { grid-column: 9 / 13; }
+  .archive-card-4 { grid-column: 2 / 8; }
+  .archive-card-5 { grid-column: 7 / 12; }
+  .archive-card-6 { grid-column: 1 / 7; }
+  .archive-card-7 { grid-column: 5 / 10; }
+  .archive-card-8 { grid-column: 9 / 13; }
 }
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
 @media (max-width: 700px) {
-
-  .gallery-heading {
-    margin: 5rem 0 3rem;
-  }
+  .gallery-heading { margin: 5rem 0 3rem; }
 
   .gallery-grid-featured {
     display: grid;
@@ -340,38 +158,23 @@
   .gallery-card-1,
   .gallery-card-2,
   .gallery-card-3,
-  .gallery-card-4 {
-    grid-column: auto;
-    margin-top: 0;
-  }
+  .gallery-card-4 { grid-column:auto; margin-top:0; }
 
   .gallery-card-1,
-  .gallery-card-4 {
-    grid-column: 1 / -1;
-  }
+  .gallery-card-4 { grid-column:1 / -1; }
 
   .gallery-card-1 a,
-  .gallery-card-4 a {
-    aspect-ratio: 1 / .8;
-  }
+  .gallery-card-4 a { aspect-ratio:1 / .8; }
 
   .gallery-card-2 a,
-  .gallery-card-3 a {
-    aspect-ratio: 1 / 1.1;
-  }
-
-  /* -------------------------
-     MOBILE ARCHIVE
-     ------------------------- */
+  .gallery-card-3 a { aspect-ratio:1 / 1.1; }
 
   .gallery-archive {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    column-gap: 1rem;
-    row-gap: 4rem;
-
-    margin-top: 6rem;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    column-gap:1rem;
+    row-gap:4rem;
+    margin-top:6rem;
   }
 
   .archive-card-1,
@@ -381,77 +184,37 @@
   .archive-card-5,
   .archive-card-6,
   .archive-card-7,
-  .archive-card-8 {
-    margin-top: 0;
-  }
+  .archive-card-8 { margin-top:0; }
 
-  .archive-card-1 {
-    grid-column: 1 / -1;
-  }
-
-  .archive-card-2 {
-    grid-column: 1 / 2;
-  }
-
-  .archive-card-3 {
-    grid-column: 2 / 3;
-  }
-
-  .archive-card-4 {
-    grid-column: 1 / -1;
-  }
-
-  .archive-card-5 {
-    grid-column: 1 / 2;
-  }
-
-  .archive-card-6 {
-    grid-column: 2 / 3;
-  }
-
-  .archive-card-7 {
-    grid-column: 1 / -1;
-  }
-
-  .archive-card-8 {
-    grid-column: 2 / 3;
-  }
+  .archive-card-1 { grid-column:1 / -1; }
+  .archive-card-2 { grid-column:1 / 2; }
+  .archive-card-3 { grid-column:2 / 3; }
+  .archive-card-4 { grid-column:1 / -1; }
+  .archive-card-5 { grid-column:1 / 2; }
+  .archive-card-6 { grid-column:2 / 3; }
+  .archive-card-7 { grid-column:1 / -1; }
+  .archive-card-8 { grid-column:2 / 3; }
 
   .archive-card-1 a,
   .archive-card-4 a,
-  .archive-card-7 a {
-    aspect-ratio: 1 / .8;
-  }
+  .archive-card-7 a { aspect-ratio:1 / .8; }
 
   .archive-card-2 a,
   .archive-card-3 a,
   .archive-card-5 a,
   .archive-card-6 a,
-  .archive-card-8 a {
-    aspect-ratio: 1 / 1.15;
-  }
+  .archive-card-8 a { aspect-ratio:1 / 1.15; }
 }
 
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
-
   .gallery-card img,
   .archive-card img,
   .gallery-card a,
-  .archive-card a {
-    transition: none;
-  }
+  .archive-card a { transition:none; }
 
   .gallery-card a:hover,
-  .archive-card a:hover {
-    transform: none;
-  }
+  .archive-card a:hover { transform:none; }
 
   .gallery-card a:hover img,
-  .archive-card a:hover img {
-    transform: none;
-  }
+  .archive-card a:hover img { transform:none; }
 }
